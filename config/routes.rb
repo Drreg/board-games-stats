@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  require 'resque/server'
+  mount Resque::Server, at: '/jobs'
 end

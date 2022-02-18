@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_203717) do
 
   create_table "game_prices", force: :cascade do |t|
     t.decimal "price", precision: 10, scale: 2, null: false
+    t.string "link", null: false
     t.bigint "game_id"
     t.bigint "store_id"
     t.datetime "created_at", null: false
